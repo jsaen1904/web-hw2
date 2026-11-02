@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 영화 데이터 실험실</title>
+</head>
+
+<body>
+    <h1>내 영화 데이터 실험실</h1>
+    <pre id="out"></pre>
+    <footer>
+        <p>이 사이트는 TMDB API를 사용하지만 TMDB의 보증이나 인증을 받지 않았습니다.
+            This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+        <p>포스터와 영화 정보: TMDB (https://www.themoviedb.org)</p>
+        <p>박스오피스 데이터: 영화진흥위원회 영화관입장권통합전산망(KOBIS), 기준일 YYYY-MM-DD</p>
+    </footer>
+    <script src="data.js"></script>
+    <script src="tmdb.js"></script>
+    <script src="app.js"></script>
+
+    <main>
+        <!-- 내가 고른 영화 5편 -->
+        <section id="mine">
+            <h2>내 인생 영화 5편</h2>
+
+            <div class="board">
+
+                <article class="card">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w342//jULvvUymAqM18gIDHbMRfKHbCSB.jpg"
+                        alt="이터널 선샤인 포스터">
+                    <span class="badge">8.1</span>
+                    <div class="info">
+                        <h3>이터널 선샤인</h3>
+                        <p class="year">2004</p>
+                        <p class="overview">전 연인의 기억을 지우며 과거에 함께했던 기억을 돌아봄</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w342//atSxEGstxXRoSKDQFBgqQ5lpGSt.jpg"
+                        alt="인셉션 포스터">
+                    <span class="badge">7.2</span>
+                    <div class="info">
+                        <h3>인셉션</h3>
+                        <p class="year">2010</p>
+                        <p class="overview">타인의 꿈에 잠입해 생각을 훔치는 특수 보안요원이 반대로 타인의 무의식 속에 새로운 생각을 심는 작전을 수행하며 벌어지는 이야기</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w342//iyQ8pmCpmnPrGtaHMfmSvQLv8Fy.jpg"
+                        alt="인생은 아름다워 포스터">
+                    <span class="badge">8.4</span>
+                    <div class="info">
+                        <h3>인생은 아름다워</h3>
+                        <p class="year">1997</p>
+                        <p class="overview">유대인 수용소에 갇힌 아들에게 끝까지 웃음과 동심을 지켜준 아버지를 그린 이야기</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w342//9fnWov6Mb7LJKA2dJLV9h1mcSnF.jpg"
+                        alt="맘마미아 포스터">
+                    <span class="badge">6.9</span>
+                    <div class="info">
+                        <h3>맘마미아!</h3>
+                        <p class="year">2008</p>
+                        <p class="overview">그리스의 한 외딴섬에서 결혼식을 앞둔 딸 소피가 자신의 진짜 아버지를 찾기 위해 엄마 도나의 옛 연인 세 명을 초대하며 벌어지는 이야기
+                        </p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w342//netHzIutioPMJt6VePen3nXBBCR.jpg"
+                        alt="노예 12년 포스터">
+                    <span class="badge">7.9</span>
+                    <div class="info">
+                        <h3>노예 12년</h3>
+                        <p class="year">2013</p>
+                        <p class="overview">자유로운 음악가에서 하루아침에 납치되어 12년 동안 노예로 살아야 했던 실존 인물 솔로몬 노섭의 이야기를 그린 영화</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="boxoffice">
+            <h2>일별 박스오피스 TOP 5</h2>
+
+            <p class="basis">KOBIS 기준일 2026-10-12</p>
+
+            <div class="board">
+
+                <!-- 1위 -->
+                <article class="card">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w342//c55ijsOdntj6P25vDwHLdgsBpmV.jpg"
+                        alt="암살자(들) 포스터">
+                    <span class="rank">1</span>
+                    <span class="badge">7.5</span>
+                    <div class="info">
+                        <h3>암살자(들)</h3>
+                        <p class="year">개봉 2026-09-23</p>
+                        <p class="audience">누적 3,023,218명</p>
+                        <p class="change up">1</p>
+                    </div>
+                </article>
+
+                <!-- 2위 -->
+                <article class="card">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w342///5TMyytCI5Pfc9c1eNsljiCdiB05.jpg.jpg"
+                        alt="극장판 치이카와: 인어 섬의 비밀 포스터">
+                    <span class="rank">2</span>
+                    <span class="badge">7.5</span>
+                    <div class="info">
+                        <h3>극장판 치이카와: 인어 섬의 비밀</h3>
+                        <p class="year">개봉 2026-09-30</p>
+                        <p class="audience">누적 1,311,535명</p>
+                        <p class="change down">-1</p>
+                    </div>
+                </article>
+
+                <!-- 3위 -->
+                <article class="card">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w342//ueigb5zra1tj6FTK9yhh2P33P9B.jpg"
+                        alt="타짜: 벨제붑의 노래 포스터">
+                    <span class="rank">3</span>
+                    <span class="badge">7.2</span>
+                    <div class="info">
+                        <h3>타짜: 벨제붑의 노래</h3>
+                        <p class="year">개봉 2026-09-23</p>
+                        <p class="audience">누적 1,763,672명</p>
+                        <p class="change">0</p>
+                    </div>
+                </article>
+
+                <!-- 4위 -->
+                <article class="card">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w342//8ze9OcVuFiy94s6FFPvsn4oC2e1.jpg"
+                        alt="오디세이 포스터">
+                    <span class="rank">4</span>
+                    <span class="badge">8.0</span>
+                    <div class="info">
+                        <h3>오디세이</h3>
+                        <p class="year">개봉 2026-08-05</p>
+                        <p class="audience">누적 12,188,537명</p>
+                        <p class="change">0</p>
+                    </div>
+                </article>
+
+                <!-- 5위 -->
+                <article class="card">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w342//mAfcD0lspaNlZDRrzT0fdWS5C01.jpg"
+                        alt="룩백 포스터">
+                    <span class="rank">5</span>
+                    <span class="badge">7.9</span>
+                    <div class="info">
+                        <h3>룩백</h3>
+                        <p class="year">개봉 2026-10-08</p>
+                        <p class="audience">누적 66,994명</p>
+                        <p class="change up">1</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>이 사이트는 TMDB API를 사용하지만 TMDB의 보증이나 인증을 받지 않았습니다.
+            This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+
+        <p>포스터와 영화 정보: TMDB (https://www.themoviedb.org)</p>
+
+        <p>박스오피스 데이터: 영화진흥위원회 영화관입장권통합전산망(KOBIS), 기준일 2026-10-12</p>
+    </footer>
+
+</body>
+
+</html>
